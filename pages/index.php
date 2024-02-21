@@ -9,6 +9,18 @@
     ?>
 </head>
 <body>
-    <h1>HELLOOOOOO</h1>
+
+    <?php
+        include('../components/header.php');
+    ?>
+
+    <main>
+        <h1>HELLOOOOOO</h1>
+    </main>
+
+    <?php
+        include('../components/footer.php');
+    ?>
+
 </body>
 </html>
