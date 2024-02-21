@@ -15,7 +15,7 @@
     ?>
 
     <main>
-        <h1>HELLOOOOOO</h1>
+        <h1 class="m-5">HELLOOOOOO</h1>
     </main>
 
     <?php
