@@ -1,0 +1,6 @@
+THOUGHTS FOR LATER:
+1-Books API: Internet Archive - Open Library API
+
+TO DO:
+1-Create Header and Footer
+2-Design DataBase
