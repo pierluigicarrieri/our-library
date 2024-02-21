@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Library - Home</title>
     <?php
         include('../components/favicon.php');
     ?>
-    <title>Our Library - Home</title>
 </head>
 <body>
     <h1>HELLOOOOOO</h1>
