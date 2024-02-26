@@ -1,6 +1,22 @@
 THOUGHTS FOR LATER:
+
 1-Books API: Internet Archive - Open Library API
 
 TO DO:
 
 1- Set pages and functionality;
+
+PAGES AND FUNCTIONALITY: 
+
+1 - Homepage: Landing page with jumbo and books index (both me and Giulia, paginated with scrolldown);
+2 - Login: Login page with form collecting first name and password;
+3 - Login Success: Shows result of login, if successful has link that redirects to books index;
+4 - Logout Success: Shows result of logout, if successful has link to homepage;
+5 - User's Library: Has index of logged in user's books with pagination;
+6 - Insert Book: Has form collecting book info for storage, controls data integrity with JS and PHP;
+7 - Book inserted: Shows results of book storage operation and the stored book;
+
+COMPONENTS:
+
+1 - Header: Has logo, link to homepage, link to login if not logged in, link to logout if logged in;
+2 - Footer: Has largely token "legal" info;
