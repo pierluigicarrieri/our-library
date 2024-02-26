@@ -1,3 +1,5 @@
+/* IMPORTANT - Users password column added later via MySql shell command (password VARCHAR(255) NOT NULL) */
+
 CREATE TABLE Users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
     first_name VARCHAR(255) NOT NULL,
