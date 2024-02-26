@@ -1,6 +1,6 @@
 INSERT INTO Users VALUES 
-    (1, 'Pierluigi', 'Carrieri', 'tiamo', 'CRRPLG90M22E205T', 'Giulia Castaldini', 'Viale XII Giugno n. 15, Bologna' '1990-08-22', 'M'),
-    (2, 'Giulia', 'Castaldini', 'tiamo', 'CSTGLI96H68A944C', 'Pierluigi Carrieri', 'Viale XII Giugno n. 15, Bologna' '1996-06-28', 'M');
+    (1, 'Pierluigi', 'Carrieri', 'tiamo', 'CRRPLG90M22E205T', 'Giulia Castaldini', 'Viale XII Giugno n. 15, Bologna', '1990-08-22', 'M'),
+    (2, 'Giulia', 'Castaldini', 'tiamo', 'CSTGLI96H68A944C', 'Pierluigi Carrieri', 'Viale XII Giugno n. 15, Bologna', '1996-06-28', 'F');
 
 INSERT INTO Books VALUES
     (1, 1, 'Php and MySql Web Development', '9780321833891', 'https://m.media-amazon.com/images/I/81sOFJBUIzL._SL1500_.jpg', 'paperback', 652, 'Addison-Wesley Professional', '2016', NULL),
