@@ -4,17 +4,17 @@ THOUGHTS FOR LATER:
 
 TO DO:
 
-1- Set pages and functionality;
+1 - Begin with footer;
 
 PAGES AND FUNCTIONALITY: 
 
 1 - Homepage: Landing page with jumbo and books index (both me and Giulia, paginated with scrolldown);
 2 - Login: Login page with form collecting first name and password;
-3 - Login Success: Shows result of login, if successful has link that redirects to books index;
-4 - Logout Success: Shows result of logout, if successful has link to homepage;
+3 - Login Results: Shows result of login, if successful has link that redirects to books index;
+4 - Logout Results: Shows result of logout, if successful has link to homepage;
 5 - User's Library: Has index of logged in user's books with pagination;
 6 - Insert Book: Has form collecting book info for storage, controls data integrity with JS and PHP;
-7 - Book inserted: Shows results of book storage operation and the stored book;
+7 - Book Inserted: Shows results of book storage operation and the stored book;
 
 COMPONENTS:
 

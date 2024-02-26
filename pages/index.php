@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php
-        include('../components/favicon.php');
-    ?>
-    <title>Our Library - Home</title>
-    <link rel="stylesheet" href="../style/general.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</head>
-<body>
+<?php
+    $title = 'Our Library - Home';
+?>
 
     <?php
         include('../components/header.php');
     ?>
 
     <main>
-        <h1>HELLOOOOOO</h1>
+        <h1>Homepage</h1>
+        <div>
+            <a href="http://localhost:8888/Personal_Projects/our_library/pages/login.php" class="btn btn-danger">Login</a>
+            <a href="http://localhost:8888/Personal_Projects/our_library/pages/login_result.php" class="btn btn-danger">Login Results</a>
+            <a href="http://localhost:8888/Personal_Projects/our_library/pages/logout_result.php" class="btn btn-danger">Logout Results</a>
+            <a href="http://localhost:8888/Personal_Projects/our_library/pages/insert_book.php" class="btn btn-danger">Add New Book</a>
+            <a href="http://localhost:8888/Personal_Projects/our_library/pages/book_insert_result.php" class="btn btn-danger">New Book Added</a>
+            <a href="http://localhost:8888/Personal_Projects/our_library/pages/user_library.php" class="btn btn-danger">User Library</a>
+        </div>
     </main>
 
     <?php
