@@ -3,4 +3,4 @@ THOUGHTS FOR LATER:
 
 TO DO:
 
-1-Implement database;
+1-Seed db with token stuff;
