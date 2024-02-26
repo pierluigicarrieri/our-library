@@ -4,7 +4,7 @@ THOUGHTS FOR LATER:
 
 TO DO:
 
-1- Set pages and functionality;
+1 - Begin with footer;
 
 PAGES AND FUNCTIONALITY: 
 
