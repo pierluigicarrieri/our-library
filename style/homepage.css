@@ -12,11 +12,12 @@ main {
 
 .card_img {
     height: 100%;
+    transition: opacity 0.8s;
 }
 
 .card:hover > .card_img {
-    opacity: 0;
-    transition: opacity 0.3s;
+    opacity: 0.1;
+    transition: opacity 0.8s;
 }
 
 .card:hover > .info_container {
@@ -29,3 +30,5 @@ main {
     inset: 0px;
     overflow-y: auto;
 }
+
+

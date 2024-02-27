@@ -8,8 +8,16 @@
 
     // Creates handle to database
     $db = new mysqli('localhost', 'root', 'root', 'our_library');
-    // Saves query in a variable, query gets 3 random books
-    $query = 'SELECT * FROM Books
+    // Saves query in a variable, query gets 4 random books (with their authors and genres as strings separated by a comma)
+    $query = 'SELECT Books.*, 
+    GROUP_CONCAT(DISTINCT CONCAT(Authors.first_name, " ", Authors.last_name) ORDER BY Authors.id) AS authors,
+    GROUP_CONCAT(DISTINCT Genres.name) AS genres
+    FROM Books
+    JOIN Author_Book ON Books.id = Author_Book.book_id
+    JOIN Authors ON Author_Book.author_id = Authors.id
+    JOIN Book_Genre ON Books.id = Book_Genre.book_id
+    JOIN Genres ON Book_Genre.genre_id = Genres.id
+    GROUP BY Books.id
     ORDER BY RAND()
     LIMIT 4';
     // Constructs a statement object with the query to use for the processing
@@ -18,10 +26,18 @@
     $statement->execute();
     // Returns an instance of the result object later used to get the data
     $results = $statement->get_result();
-    // Returns the results of the query as an array of arrays (column name as inner arrays keys)
-    $results = $results->fetch_all(MYSQLI_ASSOC);
-
-    // var_dump($results);
+    // Takes authors and strings and puts them into arrays
+    $booksWithAuthorsAndGenres = array();
+    while ($row = $results->fetch_assoc()) {
+        // Split the concatenated authors into an array
+        $row['authors'] = explode(',', $row['authors']);
+        // Split the concatenated genres into an array
+        $row['genres'] = explode(',', $row['genres']);
+        $booksWithAuthorsAndGenres[] = $row;
+    }
+    $results = $booksWithAuthorsAndGenres;
+    
+    var_dump($results);
 
 ?>
 
@@ -39,10 +55,9 @@
                 <div class="col text-light">
                     <div class="card h-100" style="width: 18rem;">
                         <img src= <?php echo $book['cover_img'] ?> class="card_img" alt="book_img">
-                        <div class="info_container">
+                        <div class="info_container px-1 py-2 text-center">
                             <h5 class="card-title"> <?php echo $book['title'] ?> </h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <p class="card-text"> <?php echo $book['description'] ?> </p>
                         </div>
                     </div>
                 </div>
