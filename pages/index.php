@@ -21,7 +21,7 @@
     // Returns the results of the query as an array of arrays (column name as inner arrays keys)
     $results = $results->fetch_all(MYSQLI_ASSOC);
 
-    var_dump($results);
+    // var_dump($results);
 
 ?>
 
@@ -30,17 +30,17 @@
     ?>
 
     <main>
-        <h1 class="text-center text-light">Homepage</h1>
+        <h1 class="p-5 text-center text-light">Welcome to our library</h1>
         <div class="container">
             <div class="row row-cols-4">
 
                 <?php foreach ($results as $book): ?>
 
                 <div class="col text-light">
-                    <div class="card" style="width: 18rem;">
-                        <img src= <?php echo $book['cover_img'] ?> class="card-img-top" alt="book_img">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                    <div class="card h-100" style="width: 18rem;">
+                        <img src= <?php echo $book['cover_img'] ?> class="card_img" alt="book_img">
+                        <div class="info_container">
+                            <h5 class="card-title"> <?php echo $book['title'] ?> </h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>

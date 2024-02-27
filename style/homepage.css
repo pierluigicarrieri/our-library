@@ -3,3 +3,29 @@ main {
     background-image: url('../assets/site_pics/jumbo.jpeg');
     background-size: cover;
 }
+
+/* Next selectors manage hover effect (from cover to info) */
+
+.card {
+    position: relative;
+}
+
+.card_img {
+    height: 100%;
+}
+
+.card:hover > .card_img {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card:hover > .info_container {
+    opacity: 1;
+}
+
+.info_container {
+    opacity: 0;
+    position: absolute;
+    inset: 0px;
+    overflow-y: auto;
+}
