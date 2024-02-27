@@ -1,9 +1,8 @@
-/* IMPORTANT - Users password column added later via MySql shell command (password VARCHAR(255) NOT NULL) */
-
 CREATE TABLE Users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
     cf VARCHAR(16) NOT NULL,
     name_fiansato VARCHAR(255) NOT NULL,
     address VARCHAR(255) NOT NULL,
@@ -15,13 +14,14 @@ CREATE TABLE Books (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
     user_id INT UNSIGNED NOT NULL,
     title VARCHAR(255) NOT NULL,
+    language VARCHAR(2) NOT NULL,
     ISBN VARCHAR(13) NOT NULL,
     cover_img VARCHAR(255) NOT NULL,
     cover_type VARCHAR(255) NOT NULL,
     number_of_pages INT NOT NULL,
     publisher VARCHAR(255) NOT NULL,
-    publication_date VARCHAR(4) NOT NULL,
-    review TEXT,
+    publication_date DATE NOT NULL,
+    description TEXT,
     FOREIGN KEY(user_id) REFERENCES Users(id)
 );
 
