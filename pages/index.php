@@ -1,6 +1,9 @@
 <?php
+    // Variable for page title
     $title = 'Our Library - Home';
-    $stylesheet = '../style/homepage.css'
+    // Variable for css sheet link
+    $stylesheet = '../style/homepage.css';
+    // Query for random books list
 ?>
 
     <?php
