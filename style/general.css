@@ -2,3 +2,10 @@
     height: 60px;
     width: 60px;
 }
+
+main {
+    min-height: 100vh;
+    background-image: url('../assets/site_pics/jumbo.jpeg');
+    background-size: cover;
+}
+

@@ -1,5 +1,8 @@
 <?php
+    // Variable for page title
     $title = 'Our Library - Login';
+    // Variable for css sheet link
+    $stylesheet = '../style/login.css';
 ?>
 
     <?php
