@@ -1,4 +1,7 @@
 <?php
+    // Starts session
+    session_start();
+    
     // Variable for page title
     $title = 'Our Library - Home';
     // Variable for css sheet link
@@ -38,6 +41,11 @@
     $results = $booksWithAuthorsAndGenres;
     
     // var_dump($results);
+
+    // Frees the result set
+    $statement->free_result();
+    // Closes the database connection
+    $db->close();
 
 ?>
 

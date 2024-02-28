@@ -4,7 +4,7 @@
 }
 
 main {
-    min-height: 100vh;
+    min-height: 80vh;
     background-image: url('../assets/site_pics/jumbo.jpeg');
     background-size: cover;
 }
