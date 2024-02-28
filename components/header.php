@@ -31,8 +31,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="http://localhost:8888/Personal_Projects/our_library/pages/login.php">Login</a>
                         </li>
-                    <!-- If user is logged in shows Logout link -->
+                    <!-- If user is logged in shows User's library link and Logout link -->
                     <?php } else { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:8888/Personal_Projects/our_library/pages/user_library.php">Your Books, <?php echo $_SESSION['logged_user'] ?></a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="http://localhost:8888/Personal_Projects/our_library/pages/logout.php">Logout</a>
                         </li>
