@@ -4,7 +4,7 @@
     // Variable for css sheet link
     $stylesheet = '../style/homepage.css';
 
-    // Query for random books list
+    // Query and code for random books list
 
     // Creates handle to database
     $db = new mysqli('localhost', 'root', 'root', 'our_library');
@@ -37,7 +37,7 @@
     }
     $results = $booksWithAuthorsAndGenres;
     
-    var_dump($results);
+    // var_dump($results);
 
 ?>
 

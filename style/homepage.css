@@ -1,9 +1,3 @@
-main {
-    min-height: 100vh;
-    background-image: url('../assets/site_pics/jumbo.jpeg');
-    background-size: cover;
-}
-
 /* Next selectors manage hover effect (from cover to info) */
 
 .card {
