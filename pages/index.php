@@ -1,4 +1,7 @@
 <?php
+    // Starts session
+    session_start();
+    
     // Variable for page title
     $title = 'Our Library - Home';
     // Variable for css sheet link

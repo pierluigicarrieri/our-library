@@ -26,9 +26,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Shows Login link only if a user is not logged in -->
+                    <?php if(!isset($_SESSION['logged_user'])) { ?>
                         <li class="nav-item">
                             <a class="nav-link" href="http://localhost:8888/Personal_Projects/our_library/pages/login.php">Login</a>
                         </li>
+                    <!-- If user is logged in shows Logout link -->
+                    <?php } else { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:8888/Personal_Projects/our_library/pages/logout.php">Logout</a>
+                        </li>
+                    <?php } ?>
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
