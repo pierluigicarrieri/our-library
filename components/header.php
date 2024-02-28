@@ -19,8 +19,8 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="http://localhost:8888/Personal_Projects/our_library/pages/index.php">
                     <img id="navlogo" src="../assets/site_pics/logo.png" alt="library_logo">
-                    <span>Our Library</span>
                 </a>
+                <a class="nav-item nav-link" href="http://localhost:8888/Personal_Projects/our_library/pages/index.php">Our Library</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
