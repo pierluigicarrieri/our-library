@@ -1,8 +1,44 @@
 <?php
+    // Starts session
+    session_start();
+
     // Variable for page title
     $title = 'Our Library - Login';
     // Variable for css sheet link
     $stylesheet = '../style/login.css';
+
+    // Script and query for login
+
+    // If username and password are set in the $_POST superglobal saves values into variables
+    if(isset($_POST['username']) && isset($_POST['password'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        // Creates handle to database
+        $db = new mysqli('localhost', 'root', 'root', 'our_library');
+        // Searches in the User table for a record with the correct username and password (as params for now)
+        $query = 'SELECT *
+        FROM Users
+        WHERE first_name = ?
+        AND password = ?';
+        // Constructs a statement object with the query to use for the processing
+        $statement = $db->prepare($query);
+        // Binds params to query
+        $statement->bind_param('ss', $username, $password);
+        // Runs the query
+        $statement->execute();
+        // Returns an instance of the result object later used to get the data
+        $results = $statement->get_result();
+
+        if($results->num_rows) {
+            $_SESSION['logged_user'] = $username;
+        }
+        // Frees the result set
+        $statement->free_result();
+        // Closes the database connection
+        $db->close();
+    };
+
+    var_dump($_SESSION);
 ?>
 
     <?php
@@ -11,14 +47,14 @@
 
     <main>
         <h1 class="p-5 text-center text-light">Login</h1>
-        <form class="d-flex flex-column align-items-center m-auto text-light">
+        <form action="login.php" method="post" class="d-flex flex-column align-items-center m-auto text-light">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">User's first name</label>
-                <input type="text" class="form-control" id="username" placeholder="es: Giulia">
+                <input type="text" class="form-control" name="username" id="username" placeholder="es: Giulia">
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password">
+                <input type="password" class="form-control" name="password" id="password">
             </div>
             <div class="button_wrapper d-flex justify-content-center">
                 <button type="submit" class="btn btn-danger m-auto">Login</button>
