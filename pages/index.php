@@ -39,6 +39,11 @@
     
     // var_dump($results);
 
+    // Frees the result set
+    $statement->free_result();
+    // Closes the database connection
+    $db->close();
+
 ?>
 
     <?php
