@@ -1,5 +1,13 @@
 <?php
-    $title = 'Our Library - Logout Results';
+    // Starts session
+    session_start();
+    
+    // Variable for page title
+    $title = 'Our Library - Logout';
+    // Variable for css sheet link
+    $stylesheet = '../style/logout.css';
+    // Unsets logged user session variable
+    unset($_SESSION['logged_user']);
 ?>
 
     <?php
@@ -7,9 +15,9 @@
     ?>
 
     <main>
-        <h1>Logout Results</h1>
-        <div>
-            <a href="http://localhost:8888/Personal_Projects/our_library/pages/index.php" class="btn btn-danger">Homepage</a>
+        <h1 class="p-5 text-center text-light">Logout Results</h1>
+        <div class="button_wrapper d-flex justify-content-center">
+            <a class="btn btn-danger" href="http://localhost:8888/Personal_Projects/our_library/pages/index.php">Home</a>
         </div>
     </main>
 
