@@ -1,3 +1,10 @@
+body {
+    font-family: 'Indie Flower', cursive !important;
+    background: #FDE3A7; /*CAPE HONEY*/
+    margin: 0px;
+    padding: 0px;
+}
+
 #navlogo {
     height: 60px;
     width: 60px;

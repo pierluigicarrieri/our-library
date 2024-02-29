@@ -56,10 +56,10 @@
     <main>
         <h1 class="p-5 text-center text-light">Welcome to our library</h1>
         <div class="container">
-            <div class="row row-cols-4">
+            <div class="row row-cols-2 gy-5">
                 <!-- Dynamically created books -->
                 <?php foreach ($results as $book): ?>
-                <div class="col text-light">
+                <div class="col d-flex justify-content-center text-light">
                     <div class="card h-100" style="width: 18rem;">
                         <img src= <?php echo $book['cover_img'] ?> class="card_img" alt="book_img">
                         <div class="info_container px-1 py-2 text-center">
