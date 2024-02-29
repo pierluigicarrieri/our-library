@@ -58,7 +58,7 @@
 
 
         <div class="container">
-            <div class="row row-cols-2 gy-5">
+            <div class="row row-cols-2 gy-5 pb-5">
                 <!-- Dynamically created books -->
                 <?php foreach ($results as $book): ?>
                 <div class="col d-flex justify-content-center p-5 text-light">
