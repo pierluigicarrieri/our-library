@@ -46,9 +46,9 @@
     ?>
 
     <main>
-        <div class="container">
-            <div class="row">
-                <div class="col">
+        <div class="container py-5">
+            <div class="row py-5">
+                <div class="col py-5">
                     <!-- Shows logged in message only if a user is logged in, gives logout button -->
                     <?php if(isset($_SESSION['logged_user'])) { ?>
 
