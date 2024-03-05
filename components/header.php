@@ -16,7 +16,7 @@
 <body>
     <header>
         <nav class="d-flex justify-content-between align-items-center p-2">
-            <div class="d-flex align-items-center">
+            <div class="nav_link d-flex align-items-center p-1">
                 <a href="http://localhost:8888/Personal_Projects/our_library/pages/index.php">
                     <img src="../assets/site_pics/logo.png" alt="library_logo">
                 </a>
@@ -25,15 +25,15 @@
             <ul class="d-flex align-items-center">
             <!-- Shows Login link only if a user is not logged in -->
             <?php if(!isset($_SESSION['logged_user'])) { ?>
-                <li class="px-2">
-                    <a href="http://localhost:8888/Personal_Projects/our_library/pages/login.php">LOGIN</a>
+                <li class="px-2 mx-2 nav_link">
+                    <a class="p-2" href="http://localhost:8888/Personal_Projects/our_library/pages/login.php">LOGIN</a>
                 </li>
             <!-- If user is logged in shows User's library link and Logout link -->
             <?php } else { ?>
-                <li class="px-2">
+                <li class="px-2 mx-2 nav_link">
                     <a href="http://localhost:8888/Personal_Projects/our_library/pages/user_library.php">YOUR BOOKS, <?php echo strtoupper($_SESSION['logged_user']) ?></a>
                 </li>
-                <li class="px-2">
+                <li class="px-2 mx-2 nav_link">
                     <a href="http://localhost:8888/Personal_Projects/our_library/pages/logout.php">LOGOUT</a>
                 </li>
             <?php } ?>
