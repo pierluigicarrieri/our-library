@@ -1,3 +1,5 @@
+/* SELECTORS FOR BOOK HOVER EFFECT */
+
 ::selection {
     background: transparent;
 }
@@ -5,9 +7,9 @@
 .card {
     position: absolute;
     top: 50%;
-    left: 50%;
-    width: 300px;
-    height: 400px;
+    left: 30%;
+    width: 400px;
+    height: 500px;
     background: #e0e1dc;
     transform-style: preserve-3d;
     transform: translate(-50%,-50%) perspective(2000px);
@@ -15,11 +17,13 @@
     transition: 1s;
 }
 
+/* Translate for book positioning, perspective for cover dimensions, rotate for book rotation, scale for change of book dimensions */
 .card:hover {
-    transform: translate(-50%,-50%) perspective(2000px) rotate(15deg) scale(1.2);
+    transform: translate(-50%,-50%) perspective(2000px) rotate(5deg) scale(1.2);
     box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
 }
 
+/* Book top pages effect */
 .card:before {
     content:'';
     position: absolute;
@@ -32,6 +36,7 @@
     transform: skewX(-45deg);
 }
 
+/* Book side pages effect */
 .card:after {
     content: '';
     position: absolute;
@@ -59,21 +64,26 @@
     height: 100%;
     opacity: 0;
     transition: .7s;
+    /* Flips text in the book's cover */
+    transform: scaleX(-1);
 }
 
 .card .imgBox img {
     min-width: 250px;
     max-height: 400px;
+    height: 100%;
+    width: 100%;
 }
 
-/* Cover opening effect */
+/* Cover opening width */
 .card:hover .imgBox {
     transform: rotateY(-135deg);
 }
 
+/* Opacity and shadow of cover on opening */
 .card:hover .bark {
     opacity: 1;
-    transition: .6s;
+    transition: 0.6s;
     box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
 }
 
@@ -84,14 +94,10 @@
     box-sizing: border-box;
     padding: 0 0 0 10px;
     z-index: -1;
-    margin-top: 70px;
-}
-
-.card .details p {
-    font-size: 15px;
-    line-height: 5px;
-    transform: rotate(-10deg);
-    padding: 0 0 0 20px;
+    margin-top: 20px;
+    max-height: 90%;
+    overflow-y: auto;
+    scrollbar-color: transparent transparent;
 }
 
 .card .details h4 {

@@ -54,21 +54,25 @@
     ?>
 
     <main>
-        <h1 class="p-5 text-center text-light">Welcome to our library</h1>
-        <div class="container">
-            <div class="row row-cols-2 gy-5">
+        <div class="container py-5">
+            <div class="row row-cols-2 py-5">
                 <!-- Dynamically created books -->
                 <?php foreach ($results as $book): ?>
-                <div class="col d-flex justify-content-center text-light">
+                <div class="col d-flex justify-content-center p-5 text-light">
                     <div class="card h-100" style="width: 18rem;">
-                        <img src= <?php echo $book['cover_img'] ?> class="card_img" alt="book_img">
-                        <div class="info_container px-1 py-2 text-center">
-                            <h5 class="card-title"> <?php echo $book['title'] ?> </h5>
-                            <!-- Dynamically created authors -->
-                            <?php foreach ($book['authors'] as $author): ?>
-                            <span class="card-title"> <?php echo $author ?> </span>
-                            <!-- End of authors loop -->
-                            <?php endforeach; ?>
+                        <div class="imgBox">
+                            <div class="bark"></div>
+                            <img src= <?php echo $book['cover_img'] ?> class="card_img" alt="book_img">
+                        </div>
+                        <div class="details px-1 py-2 text-center">
+                            <h4 class="card-title"> <?php echo $book['title'] ?> </h4>
+                            <div class="d-flex justify-content-around">
+                                <!-- Dynamically created authors -->
+                                <?php foreach ($book['authors'] as $author): ?>
+                                <h6 class="card-title px-1"> <?php echo $author ?> </h6>
+                                <!-- End of authors loop -->
+                                <?php endforeach; ?>
+                            </div>
                             <p class="card-text"> <?php echo $book['description'] ?> </p>
                         </div>
                     </div>
@@ -77,6 +81,7 @@
                 <?php endforeach; ?>
             </div>
         </div>
+
     </main>
 
     <?php

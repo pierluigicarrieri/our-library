@@ -15,37 +15,28 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="http://localhost:8888/Personal_Projects/our_library/pages/index.php">
-                    <img id="navlogo" src="../assets/site_pics/logo.png" alt="library_logo">
+        <nav class="d-flex justify-content-between align-items-center p-2">
+            <div class="nav_link d-flex align-items-center p-1">
+                <a href="http://localhost:8888/Personal_Projects/our_library/pages/index.php">
+                    <img src="../assets/site_pics/logo.png" alt="library_logo">
                 </a>
-                <a class="nav-item nav-link" href="http://localhost:8888/Personal_Projects/our_library/pages/index.php">Our Library</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- Shows Login link only if a user is not logged in -->
-                    <?php if(!isset($_SESSION['logged_user'])) { ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://localhost:8888/Personal_Projects/our_library/pages/login.php">Login</a>
-                        </li>
-                    <!-- If user is logged in shows User's library link and Logout link -->
-                    <?php } else { ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://localhost:8888/Personal_Projects/our_library/pages/user_library.php">Your Books, <?php echo $_SESSION['logged_user'] ?></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://localhost:8888/Personal_Projects/our_library/pages/logout.php">Logout</a>
-                        </li>
-                    <?php } ?>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
+                <a id="site_name" href="http://localhost:8888/Personal_Projects/our_library/pages/index.php">Our Library</a>
             </div>
+            <ul class="d-flex align-items-center">
+            <!-- Shows Login link only if a user is not logged in -->
+            <?php if(!isset($_SESSION['logged_user'])) { ?>
+                <li class="px-2 mx-2 nav_link">
+                    <a class="p-2" href="http://localhost:8888/Personal_Projects/our_library/pages/login.php">LOGIN</a>
+                </li>
+            <!-- If user is logged in shows User's library link and Logout link -->
+            <?php } else { ?>
+                <li class="px-2 mx-2 nav_link">
+                    <a href="http://localhost:8888/Personal_Projects/our_library/pages/user_library.php">YOUR BOOKS, <?php echo strtoupper($_SESSION['logged_user']) ?></a>
+                </li>
+                <li class="px-2 mx-2 nav_link">
+                    <a href="http://localhost:8888/Personal_Projects/our_library/pages/logout.php">LOGOUT</a>
+                </li>
+            <?php } ?>
+            </ul>
         </nav>
     </header>
