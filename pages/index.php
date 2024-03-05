@@ -54,9 +54,8 @@
     ?>
 
     <main>
-        <!-- <h1 class="p-5 text-center text-light">Welcome to our library</h1> -->
-        <div class="container">
-            <div class="row row-cols-2 gy-5 pb-5">
+        <div class="container py-5">
+            <div class="row row-cols-2 py-5">
                 <!-- Dynamically created books -->
                 <?php foreach ($results as $book): ?>
                 <div class="col d-flex justify-content-center p-5 text-light">
