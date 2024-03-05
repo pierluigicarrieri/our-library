@@ -1,7 +1,7 @@
 <footer>
     <div class="footer_top_wrapper d-flex flex-column align-items-center py-3">
         <div class="footer-top d-flex justify-content-between w-75 px-5 py-3">
-            <div class="px-5">
+            <div class="px-5 me-5">
                 <img src="../assets/site_pics/Pier.png" alt="Pier">
             </div>
             <div class="px-5 text-center">Now, my love, do you understand what you have done for me? <br/>And is it not a fearful thought, that a few slight circumstances might have prevented us from meeting?</div>
