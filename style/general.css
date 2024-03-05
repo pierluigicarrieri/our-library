@@ -1,3 +1,10 @@
+:root {
+    --yellow: #FFECB3;
+    --beige: #F4EFE6;
+    --brown: #8E735B;
+    --dark_brown: #3E2723;
+}
+
 body {
     font-family: 'Baskerville', cursive !important;
     margin: 0px;
@@ -14,14 +21,24 @@ ul {
     margin: 0 !important;
 }
 
+header {
+    color: var(--dark_brown);
+    font-weight: bold;
+    background-color: var(--yellow);
+}
+
 main {
     min-height: 80vh;
     background-image: url('../assets/site_pics/jumbo.jpeg');
     background-size: cover;
 }
 
-header {
-    font-weight: bold;
+footer {
+    background-color: var(--beige);
+}
+
+.footer_bottom {
+    background-color: var(--brown);
 }
 
 nav img {
