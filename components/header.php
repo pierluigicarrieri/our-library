@@ -20,21 +20,21 @@
                 <a href="http://localhost:8888/Personal_Projects/our_library/pages/index.php">
                     <img src="../assets/site_pics/logo.png" alt="library_logo">
                 </a>
-                <a href="http://localhost:8888/Personal_Projects/our_library/pages/index.php">Our Library</a>
+                <a id="site_name" href="http://localhost:8888/Personal_Projects/our_library/pages/index.php">Our Library</a>
             </div>
             <ul class="d-flex align-items-center">
             <!-- Shows Login link only if a user is not logged in -->
             <?php if(!isset($_SESSION['logged_user'])) { ?>
                 <li class="px-2">
-                    <a href="http://localhost:8888/Personal_Projects/our_library/pages/login.php">Login</a>
+                    <a href="http://localhost:8888/Personal_Projects/our_library/pages/login.php">LOGIN</a>
                 </li>
             <!-- If user is logged in shows User's library link and Logout link -->
             <?php } else { ?>
                 <li class="px-2">
-                    <a href="http://localhost:8888/Personal_Projects/our_library/pages/user_library.php">Your Books, <?php echo $_SESSION['logged_user'] ?></a>
+                    <a href="http://localhost:8888/Personal_Projects/our_library/pages/user_library.php">YOUR BOOKS, <?php echo strtoupper($_SESSION['logged_user']) ?></a>
                 </li>
                 <li class="px-2">
-                    <a href="http://localhost:8888/Personal_Projects/our_library/pages/logout.php">Logout</a>
+                    <a href="http://localhost:8888/Personal_Projects/our_library/pages/logout.php">LOGOUT</a>
                 </li>
             <?php } ?>
             </ul>

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Indie Flower', cursive !important;
+    font-family: 'Baskerville', cursive !important;
     margin: 0px;
     padding: 0px;
 }
@@ -14,14 +14,24 @@ ul {
     margin: 0 !important;
 }
 
-nav img {
-    height: 60px;
-    width: 60px;
-}
-
 main {
     min-height: 80vh;
     background-image: url('../assets/site_pics/jumbo.jpeg');
     background-size: cover;
 }
+
+header {
+    font-weight: bold;
+}
+
+nav img {
+    height: 60px;
+    width: 60px;
+}
+
+#site_name {
+    font-size: 2rem;
+}
+
+
 
