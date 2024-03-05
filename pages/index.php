@@ -54,9 +54,7 @@
     ?>
 
     <main>
-        <h1 class="p-5 text-center text-light">Welcome to our library</h1>
-
-
+        <!-- <h1 class="p-5 text-center text-light">Welcome to our library</h1> -->
         <div class="container">
             <div class="row row-cols-2 gy-5 pb-5">
                 <!-- Dynamically created books -->

@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="mb-5">
         <nav class="d-flex justify-content-between align-items-center p-2">
             <div class="d-flex align-items-center">
                 <a href="http://localhost:8888/Personal_Projects/our_library/pages/index.php">

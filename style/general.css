@@ -5,12 +5,6 @@
     --dark_brown: #3E2723;
 }
 
-body {
-    font-family: 'Baskerville', cursive !important;
-    margin: 0px;
-    padding: 0px;
-}
-
 a {
     text-decoration: none !important;
     color: inherit !important;
@@ -21,6 +15,18 @@ ul {
     margin: 0 !important;
 }
 
+h1 {
+    color: var(--beige);
+    opacity: 1;
+    z-index: 100 !important;
+}
+
+body {
+    font-family: 'Baskerville', cursive !important;
+    margin: 0px;
+    padding: 0px;
+}
+
 header {
     color: var(--dark_brown);
     font-weight: bold;
@@ -28,17 +34,12 @@ header {
 }
 
 main {
-    min-height: 80vh;
     background-image: url('../assets/site_pics/jumbo.jpeg');
     background-size: cover;
 }
 
 footer {
     background-color: var(--beige);
-}
-
-.footer_bottom {
-    background-color: var(--brown);
 }
 
 nav img {
@@ -50,5 +51,19 @@ nav img {
     font-size: 2rem;
 }
 
+/* Creates an overlay to better show text in main */
+/* main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    z-index: 0;
+} */
 
+.footer_bottom {
+    background-color: var(--brown);
+}
 
