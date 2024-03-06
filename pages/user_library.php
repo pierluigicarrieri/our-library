@@ -69,7 +69,16 @@
                 <div class="col d-flex justify-content-center p-5 text-light">
                     <div class="card h-100" style="width: 18rem;">
                         <div class="imgBox">
-                            <div class="bark"></div>
+                            <!-- Book inner cover -->
+                            <div class="bark d-flex justify-content-center">
+                                <div class="d-flex flex-column align-items-center justify-content-center">
+                                    <div>ISBN: <?php echo $book['ISBN'] ?></div>
+                                    <div>Language: <?php echo $book['language'] ?></div>
+                                    <div>Cover: <?php echo $book['cover_type'] ?></div>
+                                    <div><?php echo $book['number_of_pages'] ?> pages</div>
+                                    <div>Publisher: <?php echo $book['publisher'] ?></div>
+                                </div>
+                            </div>
                             <img src= <?php echo $book['cover_img'] ?> class="card_img" alt="book_img">
                         </div>
                         <div class="details px-1 py-2 text-center">
