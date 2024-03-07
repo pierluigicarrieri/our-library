@@ -29,7 +29,7 @@
     $statement->execute();
     // Returns an instance of the result object later used to get the data
     $results = $statement->get_result();
-    // Takes authors and strings and puts them into arrays
+    // Takes authors and genres and puts them into arrays
     $booksWithAuthorsAndGenres = array();
     while ($row = $results->fetch_assoc()) {
         // Split the concatenated authors into an array
