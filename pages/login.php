@@ -61,7 +61,7 @@
 
                         <form action="login.php" method="post" class="d-flex flex-column align-items-center m-auto text-light">
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">User's first name</label>
+                                <label for="username" class="form-label">User's first name</label>
                                 <input type="text" class="form-control" name="username" id="username" placeholder="es: Giulia">
                             </div>
                             <div class="mb-3">
