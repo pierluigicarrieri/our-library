@@ -73,7 +73,7 @@
                             <a class="btn btn-danger" href="http://localhost:8888/Personal_Projects/our_library/pages/login.php">Login</a>
                         </div>
                         <!-- If user isn't logged in shows login form -->
-                        <?php } else { ?>
+                    <?php } else { ?>
 
                         <form action="login.php" method="post" class="d-flex flex-column align-items-center m-auto text-light">
                             <div class="mb-3">

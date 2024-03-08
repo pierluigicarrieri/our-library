@@ -1,5 +1,13 @@
 <?php
+    // Starts session
+    session_start();
+
+    // Variable for page title
     $title = 'Our Library - New Book Added';
+    // Variable for css sheet link
+    $stylesheet = '../style/book_insert_result.css';
+
+    var_dump($_POST);
 ?>
 
     <?php
