@@ -47,7 +47,7 @@
         }
         $results = $booksWithAuthorsAndGenres;
         
-        // var_dump($results);
+        var_dump($results);
 
         // Frees the result set
         $statement->free_result();

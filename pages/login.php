@@ -28,10 +28,18 @@
         $statement->execute();
         // Returns an instance of the result object later used to get the data
         $results = $statement->get_result();
+        // Fetches query result and puts it into a variable
+        while ($row = $results->fetch_assoc()) {
+            $user = $row;
+        }
         // If query successful puts username in session variable
         if($results->num_rows) {
             $_SESSION['logged_user'] = $username;
+            $_SESSION['user_id'] = $user['id'];
         }
+
+        // var_dump($user);
+
         // Frees the result set
         $statement->free_result();
         // Closes the database connection
@@ -39,6 +47,7 @@
     };
 
     // var_dump($_SESSION);
+
 ?>
 
     <?php
