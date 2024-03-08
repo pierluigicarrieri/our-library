@@ -65,11 +65,14 @@
                         <div class="button_wrapper d-flex justify-content-center">
                             <a class="btn btn-danger" href="http://localhost:8888/Personal_Projects/our_library/pages/logout_result.php">Logout</a>
                         </div>
-                        <!-- If user isn't logged in shows login form -->
+                        <!-- If user types wrong username or password an error message is shown -->
                         <?php } else if (isset($_POST['username']) && isset($_POST['password'])) { ?>
 
                         <h1 class="p-5 text-center text-light">Error, can't log in, please try again</h1>
-
+                        <div class="button_wrapper d-flex justify-content-center">
+                            <a class="btn btn-danger" href="http://localhost:8888/Personal_Projects/our_library/pages/login.php">Login</a>
+                        </div>
+                        <!-- If user isn't logged in shows login form -->
                         <?php } else { ?>
 
                         <form action="login.php" method="post" class="d-flex flex-column align-items-center m-auto text-light">
@@ -87,6 +90,7 @@
                         </form>
 
                     <?php } ?>
+
                 </div>
             </div>
         </div>
