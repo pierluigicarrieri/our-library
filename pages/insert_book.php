@@ -1,5 +1,10 @@
 <?php
+    // Starts session
+    session_start();
+    
     $title = 'Our Library - Add New Book';
+    // Variable for css sheet link
+    $stylesheet = '../style/insert_book.css';
 ?>
 
     <?php

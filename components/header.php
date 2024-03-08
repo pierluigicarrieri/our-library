@@ -31,6 +31,9 @@
             <!-- If user is logged in shows User's library link and Logout link -->
             <?php } else { ?>
                 <li class="px-2 mx-2 nav_link">
+                    <a href="http://localhost:8888/Personal_Projects/our_library/pages/insert_book.php">NEW BOOK</a>
+                </li>
+                <li class="px-2 mx-2 nav_link">
                     <a href="http://localhost:8888/Personal_Projects/our_library/pages/user_library.php">YOUR BOOKS, <?php echo strtoupper($_SESSION['logged_user']) ?></a>
                 </li>
                 <li class="px-2 mx-2 nav_link">
