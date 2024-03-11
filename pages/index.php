@@ -13,7 +13,7 @@
     $db = new mysqli('localhost', 'root', 'root', 'our_library');
     // Saves query in a variable, query gets 4 random books (with their authors and genres as strings separated by a comma)
     $query = 'SELECT Books.*, 
-    GROUP_CONCAT(DISTINCT CONCAT(Authors.first_name, " ", Authors.last_name) ORDER BY Authors.id) AS authors,
+    GROUP_CONCAT(DISTINCT Authors.name ORDER BY Authors.id) AS authors,
     GROUP_CONCAT(DISTINCT Genres.name) AS genres
     FROM Books
     JOIN Author_Book ON Books.id = Author_Book.book_id
