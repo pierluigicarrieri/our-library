@@ -24,39 +24,39 @@
                                 <div class="row row-cols-3">
                                     <div class="col">
                                         <label for="title" class="form-label">Title</label>
-                                        <input type="text" class="form-control" name="title" id="title">
+                                        <input type="text" class="form-control" name="title" id="title" required>
                                     </div>
                                     <div class="col">
                                         <label for="language" class="form-label">Language</label>
-                                        <input type="text" class="form-control" name="language" id="language">
+                                        <input type="text" class="form-control" name="language" id="language" required>
                                     </div>
                                     <div class="col">
                                         <label for="ISBN" class="form-label">ISBN</label>
-                                        <input type="text" class="form-control" name="ISBN" id="ISBN">
+                                        <input type="text" class="form-control" name="ISBN" id="ISBN" required>
                                     </div>
                                 </div>
                                 <div class="row row-cols-3">
                                     <div class="col">
                                         <label for="cover_img" class="form-label">Cover Image Link</label>
-                                        <input type="text" class="form-control" name="cover_img" id="cover_img">
+                                        <input type="text" class="form-control" name="cover_img" id="cover_img" required>
                                     </div>
                                     <div class="col">
                                         <label for="cover_type" class="form-label">Cover Type</label>
-                                        <input type="text" class="form-control" name="cover_type" id="cover_type">
+                                        <input type="text" class="form-control" name="cover_type" id="cover_type" required>
                                     </div>
                                     <div class="col">
                                         <label for="number_of_pages" class="form-label">Pages</label>
-                                        <input type="text" class="form-control" name="number_of_pages" id="number_of_pages">
+                                        <input type="text" class="form-control" name="number_of_pages" id="number_of_pages" required>
                                     </div>
                                 </div>
                                 <div class="row row-cols-2">
                                     <div class="col">
                                         <label for="publisher" class="form-label">Publisher</label>
-                                        <input type="text" class="form-control" name="publisher" id="publisher">
+                                        <input type="text" class="form-control" name="publisher" id="publisher" required>
                                     </div>
                                     <div class="col">
                                         <label for="publication_date" class="form-label">Publication Date</label>
-                                        <input type="date" class="form-control" name="publication_date" id="publication_date">
+                                        <input type="date" class="form-control" name="publication_date" id="publication_date" required>
                                     </div>
                                 </div>
                                 <div class="row row-cols-1">
@@ -68,7 +68,7 @@
                                 <div class="row row-cols-3">
                                     <div class="col">
                                         <label for="author_1" class="form-label">Author 1</label>
-                                        <input type="text" class="form-control" name="author_1" id="author_1">
+                                        <input type="text" class="form-control" name="author_1" id="author_1" required>
                                     </div>
                                     <div class="col">
                                         <label for="author_2" class="form-label">Author 2</label>
@@ -82,7 +82,7 @@
                                 <div class="row row-cols-3">
                                     <div class="col">
                                         <label for="genre_1" class="form-label">Genre 1</label>
-                                        <input type="text" class="form-control" name="genre_1" id="genre_1">
+                                        <input type="text" class="form-control" name="genre_1" id="genre_1" required>
                                     </div>
                                     <div class="col">
                                         <label for="genre_2" class="form-label">Genre 2</label>

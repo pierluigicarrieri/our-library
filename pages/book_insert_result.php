@@ -7,7 +7,31 @@
     // Variable for css sheet link
     $stylesheet = '../style/book_insert_result.css';
 
-    var_dump($_POST);
+    // Creates an associative array with all the data in $_POST
+    $data = array();
+    $data['user_id'] = $_SESSION['user_id'];
+    foreach ($_POST as $key => $value) {
+        $data[$key] = $value;
+    }
+    // $data['title'] = $_POST['title'];
+    // $data[''] = $_POST[''];
+    // $data[''] = $_POST[''];
+    // $data[''] = $_POST[''];
+    // $data[''] = $_POST[''];
+    // $data[''] = $_POST[''];
+    // $data[''] = $_POST[''];
+    // $data[''] = $_POST[''];
+    // $data[''] = $_POST[''];
+    // $data[''] = $_POST[''];
+    // $data[''] = $_POST[''];
+    // $data[''] = $_POST[''];
+    // $data[''] = $_POST[''];
+    // $data[''] = $_POST[''];
+    // $data[''] = $_POST[''];
+
+    var_dump($data);
+
+    // var_dump($_POST);
 ?>
 
     <?php
