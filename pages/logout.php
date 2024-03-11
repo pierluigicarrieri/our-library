@@ -6,8 +6,9 @@
     $title = 'Our Library - Logout';
     // Variable for css sheet link
     $stylesheet = '../style/logout.css';
-    // Unsets logged user session variable
+    // Unsets logged user session variables
     unset($_SESSION['logged_user']);
+    unset($_SESSION['user_id']);
 ?>
 
     <?php
