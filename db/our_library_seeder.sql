@@ -9,14 +9,14 @@ INSERT INTO Books VALUES
     (4, 2, 'L''Alfabeto della Saggezza. 21 Racconti da Tutto il Mondo', 'IT', '9788879268653', 'https://m.media-amazon.com/images/I/81qebmmDDWL._SL1369_.jpg', 'Hardback', 141, 'Einaudi Ragazzi', '2010-11-02', 'C''era una volta un pescatore che viveva con sua moglie in una vecchia capanna sulla riva del mare. Tutti i giorni saliva in barca, felice di vedere le onde bordate di schiuma, di sentire il sole accarezzargli il viso e il vento muovergli dolcemente i capelli. Talvolta, stordito dal calore del sole, stava lì immobile, preso dalla bellezza della natura, dimenticandosi perfino di gettare la rete. Un mattino in cui il mare era particolarmente calmo, lanciò le reti nell''acqua trasparente, ringraziando il cielo per una così bella giornata. Quando giunse il momento di tirarle su, si accorse che faceva molta fatica. Tirò con tutte le sue forze, pensando di aver catturato parecchi pesci di grosse dimensioni. Ma quale non fu la sua sorpresa nel vedere che la rete conteneva un solo pesce con le scaglie dorate. Per ogni lettera dell''alfabeto una parola dal significato forte e importante. E per ogni parola un racconto, tratto dalle storie tradizionali di tutto il mondo, che rappresenta una sorta di parabola. Questa edizione ripropone il testo in una nuova collana per ragazzi, dedicata ai loro animi avventurosi, sognatori e a volte ribelli. Storie ricche di forti emozioni scritte da autori fra i più affermati nella narrativa per l''infanzia arricchite dai disegni di grandi illustratori. Età di lettura: da 8 anni.');
 
 INSERT INTO Authors VALUES
-    (1, 'Luke', 'Welling'),
-    (2, 'Laura', 'Thomson'),
-    (3, 'Aurelia', 'Amata'),
-    (4, 'J.K.', 'Rowling'),
-    (5, 'Miraphora', 'Mina'),
-    (6, 'Eduardo', 'Lima'),
-    (7, 'Johanna', 'Marin Coles'),
-    (8, 'Lydia', 'Marin Ross');
+    (1, 'Luke Welling'),
+    (2, 'Laura Thomson'),
+    (3, 'Aurelia Amata'),
+    (4, 'J.K. Rowling'),
+    (5, 'Miraphora Mina'),
+    (6, 'Eduardo Lima'),
+    (7, 'Johanna Marin Coles'),
+    (8, 'Lydia Marin Ross');
 
 INSERT INTO Genres VALUES
     (1, 'Programming'),
