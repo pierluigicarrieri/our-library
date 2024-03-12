@@ -8,13 +8,18 @@
     position: absolute;
     top: 50%;
     left: 30%;
-    width: 400px;
-    height: 500px;
+    width: 300px !important;
+    height: 400px !important;
     background: #e0e1dc;
     transform-style: preserve-3d;
     transform: translate(-50%,-50%) perspective(2000px);
     box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
     transition: 1s;
+}
+
+.card_img {
+    width: 100%;
+    height: auto;
 }
 
 /* Translate for book positioning, perspective for cover dimensions, rotate for book rotation, scale for change of book dimensions */

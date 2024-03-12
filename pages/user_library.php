@@ -67,7 +67,7 @@
                 <!-- Dynamically created books -->
                 <?php foreach ($results as $book): ?>
                 <div class="col d-flex justify-content-center p-5 text-light">
-                    <div class="card h-100" style="width: 18rem;">
+                    <div class="card" style="width: 18rem;">
                         <div class="imgBox">
                             <!-- Book inner cover -->
                             <div class="bark d-flex justify-content-center">

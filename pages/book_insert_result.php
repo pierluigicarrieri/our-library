@@ -5,7 +5,7 @@
     // Variable for page title
     $title = 'Our Library - New Book Added';
     // Variable for css sheet link
-    $stylesheet = '../style/book_insert_result.css';
+    $stylesheet = '../style/user_library.css';
 
     // Code to search for the newly added book and save it for show in results page
 
@@ -61,7 +61,7 @@
             <div class="row row-cols-1 py-5">
                 <!-- Book -->
                 <div class="col d-flex justify-content-center p-5 text-light">
-                    <div class="card h-100" style="width: 18rem;">
+                    <div class="card" style="width: 18rem;">
                         <div class="imgBox">
                             <!-- Book inner cover -->
                             <div class="bark d-flex justify-content-center">
