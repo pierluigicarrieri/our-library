@@ -75,8 +75,9 @@
                             </div>
                             <img src= <?php echo $book[0]['cover_img'] ?> class="card_img" alt="book_img">
                         </div>
-                        <div class="details w-100 h-100 px-1 py-2 text-center">
+                        <div class="details w-100 h-100 px-3 py-2 text-center">
                             <h4 class="card-title"> <?php echo $book[0]['title'] ?> </h4>
+                            <hr>
                             <div class="d-flex justify-content-around">
                                 <!-- Dynamically created authors -->
                                 <?php foreach ($book[0]['authors'] as $author): ?>
@@ -84,6 +85,7 @@
                                 <!-- End of authors loop -->
                                 <?php endforeach; ?>
                             </div>
+                            <hr>
                             <p class="card-text"> <?php echo $book[0]['description'] ?> </p>
                         </div>
                     </div>

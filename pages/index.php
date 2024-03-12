@@ -59,7 +59,7 @@
                 <!-- Dynamically created books -->
                 <?php foreach ($results as $book): ?>
                 <div class="col d-flex justify-content-center p-5 text-light">
-                    <div class="card h-100" style="width: 18rem;">
+                    <div class="card" style="width: 18rem;">
                         <div class="imgBox">
                             <!-- Book inner cover -->
                             <div class="bark d-flex justify-content-center">
@@ -73,8 +73,9 @@
                             </div>
                             <img src= <?php echo $book['cover_img'] ?> class="card_img" alt="book_img">
                         </div>
-                        <div class="details w-100 h-100 px-1 py-2 text-center">
+                        <div class="details w-100 h-100 px-3 py-1 text-center">
                             <h4 class="card-title"> <?php echo $book['title'] ?> </h4>
+                            <hr>
                             <div class="d-flex justify-content-around">
                                 <!-- Dynamically created authors -->
                                 <?php foreach ($book['authors'] as $author): ?>
@@ -82,6 +83,7 @@
                                 <!-- End of authors loop -->
                                 <?php endforeach; ?>
                             </div>
+                            <hr>
                             <p class="card-text"> <?php echo $book['description'] ?> </p>
                         </div>
                     </div>
@@ -90,7 +92,6 @@
                 <?php endforeach; ?>
             </div>
         </div>
-
     </main>
 
     <?php
