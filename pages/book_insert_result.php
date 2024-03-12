@@ -47,7 +47,7 @@
     // Close the database connection
     $db->close();
 
-    var_dump($book);
+    // var_dump($book);
     // var_dump($data);
     // var_dump($_POST);
 ?>
