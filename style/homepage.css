@@ -17,6 +17,11 @@
     transition: 1s;
 }
 
+.card_img {
+    width: 300px !important;
+    height: 400px !important;
+}
+
 /* Translate for book positioning, perspective for cover dimensions, rotate for book rotation, scale for change of book dimensions */
 .card:hover {
     transform: translate(-25%,-50%) perspective(2000px) rotate(5deg) scale(1.2);
