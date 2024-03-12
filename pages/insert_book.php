@@ -19,7 +19,7 @@
                     <!-- Shows book insert form only if a user is logged in -->
                     <?php if(isset($_SESSION['logged_user'])) { ?>
 
-                        <form action="book_insert_result.php" method="post" class="d-flex flex-column align-items-center m-auto text-light">
+                        <form action="../php_scripts/book_adder.php" method="post" class="d-flex flex-column align-items-center m-auto text-light">
                             <div class="container">
                                 <div class="row row-cols-3">
                                     <div class="col">
