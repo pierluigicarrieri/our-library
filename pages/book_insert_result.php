@@ -57,9 +57,6 @@
     ?>
 
     <main>
-
-        <h1>New Book Added</h1>
-
         <div class="container py-5">
             <div class="row row-cols-1 py-5">
                 <!-- Book -->
@@ -94,11 +91,6 @@
                 <!-- End of book -->
             </div>
         </div>
-
-        <div>
-            <a href="http://localhost:8888/Personal_Projects/our_library/pages/index.php" class="btn btn-danger">Homepage</a>
-        </div>
-
     </main>
 
     <?php
