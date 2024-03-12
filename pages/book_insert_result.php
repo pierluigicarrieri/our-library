@@ -87,6 +87,44 @@
         }
     }
 
+    // Code to search for the newly added book and save it for show in results page
+
+    // Saves isbn of the added book into session variable
+    $_SESSION['book_identifier'] = $_data['ISBN'];
+    // Saves query in a variable, query gets the book with the same ISBN as the saved one
+    $query = 'SELECT Books.*, 
+    GROUP_CONCAT(DISTINCT Authors.name ORDER BY Authors.id) AS authors,
+    GROUP_CONCAT(DISTINCT Genres.name) AS genres
+    FROM Books
+    JOIN Author_Book ON Books.id = Author_Book.book_id
+    JOIN Authors ON Author_Book.author_id = Authors.id
+    JOIN Book_Genre ON Books.id = Book_Genre.book_id
+    JOIN Genres ON Book_Genre.genre_id = Genres.id
+    JOIN Users ON Books.user_id = Users.id
+    WHERE Books.ISBN = ?';
+    // Constructs a statement object with the query to use for the processing
+    $statement = $db->prepare($query);
+    // Binds params to query
+    $statement->bind_param('s', $_SESSION['book_identifier']);
+    // Runs the query
+    $statement->execute();
+    // Returns an instance of the result object later used to get the data
+    $results = $statement->get_result();
+    // Takes authors and genres and puts them into arrays
+    $booksWithAuthorsAndGenres = array();
+    while ($row = $results->fetch_assoc()) {
+        // Split the concatenated authors into an array
+        $row['authors'] = explode(',', $row['authors']);
+        // Split the concatenated genres into an array
+        $row['genres'] = explode(',', $row['genres']);
+        $booksWithAuthorsAndGenres[] = $row;
+    }
+    $results = $booksWithAuthorsAndGenres;
+
+    var_dump($results);
+
+    // Frees the result set
+    $statement->free_result();
     // Close the database connection
     $db->close();
 
@@ -99,10 +137,50 @@
     ?>
 
     <main>
+
         <h1>New Book Added</h1>
+
+        <div class="container py-5">
+            <div class="row row-cols-1 py-5">
+                <!-- Dynamically created books -->
+                <?php foreach ($results as $book): ?>
+                <div class="col d-flex justify-content-center p-5 text-light">
+                    <div class="card h-100" style="width: 18rem;">
+                        <div class="imgBox">
+                            <!-- Book inner cover -->
+                            <div class="bark d-flex justify-content-center">
+                                <div class="d-flex flex-column align-items-center justify-content-center">
+                                    <div>ISBN: <?php echo $book['ISBN'] ?></div>
+                                    <div>Language: <?php echo $book['language'] ?></div>
+                                    <div>Cover: <?php echo $book['cover_type'] ?></div>
+                                    <div><?php echo $book['number_of_pages'] ?> pages</div>
+                                    <div>Publisher: <?php echo $book['publisher'] ?></div>
+                                </div>
+                            </div>
+                            <img src= <?php echo $book['cover_img'] ?> class="card_img" alt="book_img">
+                        </div>
+                        <div class="details px-1 py-2 text-center">
+                            <h4 class="card-title"> <?php echo $book['title'] ?> </h4>
+                            <div class="d-flex justify-content-around">
+                                <!-- Dynamically created authors -->
+                                <?php foreach ($book['authors'] as $author): ?>
+                                <h6 class="card-title px-1"> <?php echo $author ?> </h6>
+                                <!-- End of authors loop -->
+                                <?php endforeach; ?>
+                            </div>
+                            <p class="card-text"> <?php echo $book['description'] ?> </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of books loop -->
+                <?php endforeach; ?>
+            </div>
+        </div>
+
         <div>
             <a href="http://localhost:8888/Personal_Projects/our_library/pages/index.php" class="btn btn-danger">Homepage</a>
         </div>
+
     </main>
 
     <?php
